@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoExcel - Concessionario Auto Premium</title>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">AutoExcel</div>
+            <p>Il tuo concessionario di fiducia dal 1985</p>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#auto">Auto</a></li>
+                    <li><a href="#servizi">Servizi</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>Trova l'Auto dei Tuoi Sogni</h1>
+            <p>Scopri la nostra vasta gamma di auto nuove e usate con le migliori offerte del mercato</p>
+            <div class="cta-button blinking" onclick="openModal()">Richiedi Preventivo</div>
+        </section>
+
+        <section class="cars-section" id="auto">
+            <h2>Le Nostre Auto in Evidenza</h2>
+            <div class="cars-grid">
+                <div class="car-card">
+                    <div class="car-image">🚗</div>
+                    <div class="car-details">
+                        <h3>BMW Serie 3</h3>
+                        <p>Anno: 2023</p>
+                        <p>Km: 15.000</p>
+                        <p>Carburante: Diesel</p>
+                        <div class="price">€ 35.000</div>
+                        <a href="#" class="small-link">Clicca qui per maggiori informazioni</a>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">🚙</div>
+                    <div class="car-details">
+                        <h3>Audi Q5</h3>
+                        <p>Anno: 2022</p>
+                        <p>Km: 25.000</p>
+                        <p>Carburante: Benzina</p>
+                        <div class="price">€ 42.000</div>
+                        <span class="red-text">Offerta limitata!</span>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <div class="car-image">🏎️</div>
+                    <div class="car-details">
+                        <h3>Mercedes Classe C</h3>
+                        <p>Anno: 2023</p>
+                        <p>Km: 8.000</p>
+                        <p>Carburante: Ibrido</p>
+                        <div class="price">€ 48.000</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="accordion" id="servizi">
+            <h2>I Nostri Servizi</h2>
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(0)">
+                    Vendita Auto Nuove e Usate
+                </div>
+                <div class="accordion-content">
+                    <p>Offriamo una vasta gamma di auto nuove e usate dei migliori marchi. Ogni vettura usata viene accuratamente controllata e certificata dai nostri esperti meccanici.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(1)">
+                    Finanziamenti e Leasing
+                </div>
+                <div class="accordion-content">
+                    <p>Proponiamo soluzioni di finanziamento personalizzate e contratti di leasing vantaggiosi. I nostri consulenti finanziari ti aiuteranno a trovare la soluzione più adatta alle tue esigenze.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(2)">
+                    Assistenza e Riparazioni
+                </div>
+                <div class="accordion-content">
+                    <p>Il nostro centro assistenza è attrezzato con le più moderne tecnologie per garantire riparazioni rapide e di qualità. Utilizziamo solo ricambi originali.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-info" id="contatti">
+            <h2>Contattaci</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Indirizzo</h3>
+                    <p>Via Roma 123<br>10100 Torino, Italia</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Telefono</h3>
+                    <p>+39 011 123 4567</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email</h3>
+                    <p>info@autoexcel.it</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">🕒</div>
+                    <h3>Orari</h3>
+                    <p>Lun-Ven: 9:00-18:00<br>Sab: 9:00-13:00</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal per richiesta preventivo -->
+    <div id="preventivo-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Richiedi Preventivo</h2>
+            <form id="preventivo-form">
+                <div class="form-group">
+                    <label>Nome</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Telefono</label>
+                    <input type="tel" id="telefono">
+                </div>
+                <div class="form-group">
+                    <label>Auto di interesse</label>
+                    <select id="auto-interesse">
+                        <option value="">Seleziona un'auto</option>
+                        <option value="bmw">BMW Serie 3</option>
+                        <option value="audi">Audi Q5</option>
+                        <option value="mercedes">Mercedes Classe C</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Messaggio</label>
+                    <textarea id="messaggio" rows="4" placeholder="Inserisci qui eventuali richieste specifiche..."></textarea>
+                </div>
+                <button type="submit" class="cta-button">Invia Richiesta</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="main.js"></script>
+</body>
+</html>
