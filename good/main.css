@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+:focus-visible {
+    outline: 3px dashed #c41e3a;
+    outline-offset: 2px;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -30,9 +35,8 @@ body {
     border-radius: 4px;
 }
 
-.skip-link:focus {
-    top: 6px;
-}
+
+
 
 header {
     background: rgba(255, 255, 255, 0.95);
@@ -81,10 +85,27 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-nav a:focus {
-    outline: 2px solid #2c3e50;
-    outline-offset: 2px;
+h1, .h1 {
+    font-size: 3.4rem;
 }
+h2, .h2 {
+    font-size: 3rem;
+}
+h3, .h3 {
+    font-size: 2.2rem;
+}
+h4, .h4 {
+    font-size: 1.8rem;
+}
+h5, .h5 {
+    font-size: 1.3rem;
+}
+h6, .h6 {
+    font-size: 1rem;
+}
+
+
+
 
 .hero {
     background: rgba(255, 255, 255, 0.9);
@@ -95,8 +116,7 @@ nav a:focus {
     text-align: center;
 }
 
-.hero h1 {
-    font-size: 3em;
+.hero h1 { 
     margin-bottom: 20px;
     background: linear-gradient(45deg, #2c3e50, #1a252f);
     -webkit-background-clip: text;
@@ -129,10 +149,7 @@ nav a:focus {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-.cta-button:focus {
-    outline: 3px solid #2c3e50;
-    outline-offset: 2px;
-}
+
 
 .cars-section {
     background: rgba(255, 255, 255, 0.9);
@@ -144,7 +161,6 @@ nav a:focus {
 
 .cars-section h2 {
     margin-bottom: 20px;
-    font-size: 2.2em;
     color: #2c3e50;
 }
 
@@ -179,6 +195,12 @@ nav a:focus {
     justify-content: center;
     font-size: 3em;
     color: white;
+    overflow: hidden;
+}
+.img-fluid {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
 }
 
 .car-details h3 {
@@ -213,10 +235,6 @@ nav a:focus {
     color: #c41e3a;
 }
 
-.car-link:focus {
-    outline: 2px solid #2c3e50;
-    outline-offset: 2px;
-}
 
 .highlight-text {
     color: #c0392b;
@@ -235,7 +253,6 @@ nav a:focus {
 
 .accordion h2 {
     margin-bottom: 20px;
-    font-size: 2.2em;
     color: #2c3e50;
 }
 
@@ -243,7 +260,6 @@ nav a:focus {
     border: 1px solid #ddd;
     border-radius: 10px;
     margin-bottom: 10px;
-    overflow: hidden;
 }
 
 .accordion-header {
@@ -263,10 +279,8 @@ nav a:focus {
     background: linear-gradient(45deg, #34495e, #2c3e50);
 }
 
-.accordion-header:focus {
-    outline: 3px solid #fff;
-    outline-offset: -3px;
-}
+
+
 
 .accordion-header[aria-expanded="true"] {
     background: linear-gradient(45deg, #34495e, #2c3e50);
@@ -330,10 +344,7 @@ nav a:focus {
     color: #333;
 }
 
-.close:focus {
-    outline: 2px solid #2c3e50;
-    outline-offset: 2px;
-}
+
 
 .form-group {
     margin-bottom: 20px;
@@ -358,13 +369,6 @@ nav a:focus {
     transition: border-color 0.3s ease;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #2c3e50;
-    box-shadow: 0 0 0 2px rgba(44, 62, 80, 0.2);
-}
 
 .contact-info {
     background: rgba(255, 255, 255, 0.9);

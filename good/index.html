@@ -26,7 +26,7 @@
 
         <main id="main-content" role="main">
             <section class="hero" id="home">
-                <h1>Trova l'Auto dei Tuoi Sogni</h1>
+                <h1 class="h3">Trova l'Auto dei Tuoi Sogni</h1>
                 <p>Scopri la nostra vasta gamma di auto nuove e usate con le migliori offerte del mercato</p>
                 <button class="cta-button" onclick="openModal()" aria-describedby="preventivo-desc">
                     Richiedi Preventivo
@@ -37,12 +37,14 @@
             </section>
 
             <section class="cars-section" id="auto">
-                <h2>Le Nostre Auto in Evidenza</h2>
+                <h2 class="h4">Le Nostre Auto in Evidenza</h2>
                 <div class="cars-grid">
                     <article class="car-card">
-                        <div class="car-image" aria-hidden="true">🚗</div>
+                        <div class="car-image">
+                            <img src="./img/img-1.jpeg" class="img-fluid" alt="BMW Serie 3, 5 porte grigia, vista anteriore sinistra">
+                        </div>
                         <div class="car-details">
-                            <h3>BMW Serie 3</h3>
+                            <h3 class="h5">BMW Serie 3</h3>
                             <p>Anno: 2023</p>
                             <p>Chilometri: 15.000</p>
                             <p>Carburante: Diesel</p>
@@ -51,9 +53,11 @@
                         </div>
                     </article>
                     <article class="car-card">
-                        <div class="car-image" aria-hidden="true">🚙</div>
+                        <div class="car-image">
+                            <img src="./img/img-2.jpeg" class="img-fluid" alt="Audi Q5, grigio scuro, vista anteriore destra">
+                        </div>
                         <div class="car-details">
-                            <h3>Audi Q5</h3>
+                            <h3 class="h5">Audi Q5</h3>
                             <p>Anno: 2022</p>
                             <p>Chilometri: 25.000</p>
                             <p>Carburante: Benzina</p>
@@ -62,9 +66,11 @@
                         </div>
                     </article>
                     <article class="car-card">
-                        <div class="car-image" aria-hidden="true">🏎️</div>
+                        <div class="car-image">
+                            <img src="./img/img-3.jpeg" class="img-fluid" alt="Mercedes Classe C, grigio scuro, vista anteriore destra">
+                        </div>
                         <div class="car-details">
-                            <h3>Mercedes Classe C</h3>
+                            <h3 class="h5">Mercedes Classe C</h3>
                             <p>Anno: 2023</p>
                             <p>Chilometri: 8.000</p>
                             <p>Carburante: Ibrido</p>
@@ -75,7 +81,7 @@
             </section>
 
             <section class="accordion" id="servizi">
-                <h2>I Nostri Servizi</h2>
+                <h2 class="h4">I Nostri Servizi</h2>
                 <div class="accordion-item">
                     <button class="accordion-header" onclick="toggleAccordion(0)" aria-expanded="false" aria-controls="accordion-content-0">
                         Vendita Auto Nuove e Usate
@@ -103,26 +109,26 @@
             </section>
 
             <section class="contact-info" id="contatti">
-                <h2>Contattaci</h2>
+                <h2 class="h4">Contattaci</h2>
                 <div class="contact-grid">
                     <div class="contact-card">
                         <div class="contact-icon" aria-hidden="true">📍</div>
-                        <h3>Indirizzo</h3>
+                        <h3 class="h5">Indirizzo</h3>
                         <p>Via Roma 123<br>10100 Torino, Italia</p>
                     </div>
                     <div class="contact-card">
                         <div class="contact-icon" aria-hidden="true">📞</div>
-                        <h3>Telefono</h3>
+                        <h3 class="h5">Telefono</h3>
                         <p>+39 011 123 4567</p>
                     </div>
                     <div class="contact-card">
                         <div class="contact-icon" aria-hidden="true">✉️</div>
-                        <h3>Email</h3>
+                        <h3 class="h5">Email</h3>
                         <p>info@autoexcel.it</p>
                     </div>
                     <div class="contact-card">
                         <div class="contact-icon" aria-hidden="true">🕒</div>
-                        <h3>Orari</h3>
+                        <h3 class="h5">Orari</h3>
                         <p>Lunedì-Venerdì: 9:00-18:00<br>Sabato: 9:00-13:00</p>
                     </div>
                 </div>
@@ -131,7 +137,7 @@
     </div>
 
     <!-- Modal per richiesta preventivo -->
-    <div id="preventivo-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+    <div id="preventivo-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
         <div class="modal-content">
             <button class="close" onclick="closeModal()" aria-label="Chiudi finestra di dialogo">&times;</button>
             <h2 id="modal-title">Richiedi Preventivo</h2>
